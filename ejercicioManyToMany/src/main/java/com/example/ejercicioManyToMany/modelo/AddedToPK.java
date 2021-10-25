@@ -6,13 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import java.io.Serializable;
 
-@Entity
+@Embeddable
 @AllArgsConstructor @NoArgsConstructor
 @Getter @Setter
-public class AddedToPK implements Serializable {
+public class AddedToPK implements Serializable{
 
     private Long song_id;
 

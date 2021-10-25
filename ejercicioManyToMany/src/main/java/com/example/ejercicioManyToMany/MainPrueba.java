@@ -4,15 +4,22 @@ import com.example.ejercicioManyToMany.modelo.Artist;
 import com.example.ejercicioManyToMany.modelo.Playlist;
 import com.example.ejercicioManyToMany.modelo.Song;
 import com.example.ejercicioManyToMany.service.ArtistService;
+import com.example.ejercicioManyToMany.service.PlaylistService;
+import com.example.ejercicioManyToMany.service.SongService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+
 
 @Component
-@RequieredArgsConstructors
+@RequiredArgsConstructor
 public class MainPrueba {
 
     private final ArtistService artistService;
     private final SongService songService;
     private final PlaylistService playlistService;
-    //private final AddedToService addedToService;
+
 
     @PostConstruct
     public void init(){
@@ -37,7 +44,6 @@ public class MainPrueba {
 
 
 
-        //playlist = addedToService.AniadirCancion(playlist,song);
 
 
     }
